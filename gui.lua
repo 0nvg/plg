@@ -11,9 +11,11 @@ local TeamsMinimizer = Instance.new("TextButton")
 local TeamsText = Instance.new("TextLabel")
 local MainHeader = Instance.new("Frame")
 local MainMenu = Instance.new("Frame")
-local Items = Instance.new("TextButton")
-local Teams = Instance.new("TextButton")
-local Local = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextBox_2 = Instance.new("TextBox")
+local TextLabel_3 = Instance.new("TextLabel")
 local MainText = Instance.new("TextLabel")
 local MainMinimizer = Instance.new("TextButton")
 local ItemsHeader = Instance.new("Frame")
@@ -48,7 +50,6 @@ TeamsHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 TeamsHeader.BorderSizePixel = 0
 TeamsHeader.Position = UDim2.new(0.316145837, 0, 0.246871486, 0)
 TeamsHeader.Size = UDim2.new(0, 175, 0, 20)
-TeamsHeader.Visible = false
 
 TeamsMenu.Name = "TeamsMenu"
 TeamsMenu.Parent = TeamsHeader
@@ -134,47 +135,74 @@ MainMenu.Name = "MainMenu"
 MainMenu.Parent = MainHeader
 MainMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainMenu.BorderSizePixel = 0
-MainMenu.Position = UDim2.new(0, 0, 0.99999845, 0)
-MainMenu.Size = UDim2.new(0, 350, 0, 129)
+MainMenu.Position = UDim2.new(0, 0, 2.50000072, 0)
+MainMenu.Size = UDim2.new(0, 350, 0, 98)
 
-Items.Name = "Items"
-Items.Parent = MainMenu
-Items.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Items.BorderSizePixel = 0
-Items.Position = UDim2.new(0.282999992, 0, 0.64200002, 0)
-Items.Size = UDim2.new(0, 150, 0, 30)
-Items.Font = Enum.Font.Code
-Items.Text = "ITEMS"
-Items.TextColor3 = Color3.fromRGB(0, 0, 0)
-Items.TextScaled = true
-Items.TextSize = 14.000
-Items.TextWrapped = true
+TextBox.Parent = MainMenu
+TextBox.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.392857134, 0, 0.10204082, 0)
+TextBox.Size = UDim2.new(0, 173, 0, 28)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSansItalic
+TextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.PlaceholderText = "discord.gg/JAs3nCpBUp"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
 
-Teams.Name = "Teams"
-Teams.Parent = MainMenu
-Teams.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Teams.BorderSizePixel = 0
-Teams.Position = UDim2.new(0.034285713, 0, 0.34168458, 0)
-Teams.Size = UDim2.new(0, 150, 0, 30)
-Teams.Font = Enum.Font.Code
-Teams.Text = "TEAMS"
-Teams.TextColor3 = Color3.fromRGB(0, 0, 0)
-Teams.TextScaled = true
-Teams.TextSize = 14.000
-Teams.TextWrapped = true
+TextLabel.Parent = MainMenu
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.0918367356, 0)
+TextLabel.Size = UDim2.new(0, 137, 0, 29)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Text = "Discord:"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
-Local.Name = "Local"
-Local.Parent = MainMenu
-Local.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Local.BorderSizePixel = 0
-Local.Position = UDim2.new(0.540428579, 0, 0.3369627, 0)
-Local.Size = UDim2.new(0, 150, 0, 30)
-Local.Font = Enum.Font.Code
-Local.Text = "LOCAL"
-Local.TextColor3 = Color3.fromRGB(0, 0, 0)
-Local.TextScaled = true
-Local.TextSize = 14.000
-Local.TextWrapped = true
+TextLabel_2.Parent = MainMenu
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 0, 0.408163249, 0)
+TextLabel_2.Size = UDim2.new(0, 137, 0, 29)
+TextLabel_2.Font = Enum.Font.Code
+TextLabel_2.Text = "Github:"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextBox_2.Parent = MainMenu
+TextBox_2.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.392857134, 0, 0.416326404, 0)
+TextBox_2.Size = UDim2.new(0, 173, 0, 28)
+TextBox_2.ClearTextOnFocus = false
+TextBox_2.Font = Enum.Font.SourceSansItalic
+TextBox_2.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.PlaceholderText = "github.com/aeg-eus"
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
+
+TextLabel_3.Parent = MainMenu
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.357142955, 0, 0.704081655, 0)
+TextLabel_3.Size = UDim2.new(0, 224, 0, 29)
+TextLabel_3.Font = Enum.Font.SourceSansItalic
+TextLabel_3.Text = "this shit pretty trash but it work"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
 
 MainText.Name = "MainText"
 MainText.Parent = MainHeader
@@ -209,7 +237,6 @@ ItemsHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 ItemsHeader.BorderSizePixel = 0
 ItemsHeader.Position = UDim2.new(0.421875, 0, 0.246871486, 0)
 ItemsHeader.Size = UDim2.new(0, 300, 0, 20)
-ItemsHeader.Visible = false
 
 ItemsMenu.Name = "ItemsMenu"
 ItemsMenu.Parent = ItemsHeader
@@ -303,7 +330,6 @@ LocalHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 LocalHeader.BorderSizePixel = 0
 LocalHeader.Position = UDim2.new(0.591145813, 0, 0.246871486, 0)
 LocalHeader.Size = UDim2.new(0, 275, 0, 20)
-LocalHeader.Visible = false
 
 LocalMenu.Name = "LocalMenu"
 LocalMenu.Parent = LocalHeader
@@ -455,7 +481,7 @@ LocalMinimizer.TextScaled = true
 LocalMinimizer.TextSize = 14.000
 LocalMinimizer.TextWrapped = true
 
-local function WXXF_fake_script()
+local function NTXS_fake_script()
 	local script = Instance.new('LocalScript', AegsPrisonLifeGui)
 	
 	local mf = game:GetService("Players").LocalPlayer
@@ -465,11 +491,8 @@ local function WXXF_fake_script()
 	local rmldc = game:GetService("Workspace").Remote.loadchar
 	local rmitm = game:GetService("Workspace").Remote.ItemHandler
 	
-	local tms = script.Parent.MainHeader.MainMenu.Teams
-	local itm = script.Parent.MainHeader.MainMenu.Items
-	local lcl = script.Parent.MainHeader.MainMenu.Local
-	
-	local tmsmnu = script.Parent.MainHeader.MainMenu
+	local minmnu = script.Parent.MainHeader.MainMenu
+	local tmsmnu = script.Parent.TeamsHeader.TeamsMenu
 	local itmmnu = script.Parent.ItemsHeader.ItemsMenu
 	local lclmnu = script.Parent.LocalHeader.LocalMenu
 	
@@ -516,12 +539,6 @@ local function WXXF_fake_script()
 	local wsbx = script.Parent.LocalHeader.LocalMenu.Walkspeed
 	local jpbx = script.Parent.LocalHeader.LocalMenu.Jumppower
 	
-	local tl1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tl2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tl3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tl4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	local tl5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-	
 	-- *DISABLED* local kybt = script.Parent.ItemsHeader.ItemsMenu.Key
 	-- *DISABLED* local knbt = script.Parent.ItemsHeader.ItemsMenu.Knife
 	-- *DISABLED* local hmbt = script.Parent.ItemsHeader.ItemsMenu.Hammer
@@ -531,6 +548,7 @@ local function WXXF_fake_script()
 	-- *DISABLED* local hammer = game:GetService("Workspace")["Prison_ITEMS"].single.Hammer.ITEMPICKUP
 	
 	--[[ MAIN SECTION ]]--
+	--[[ *DISABLED*
 	tms.MouseButton1Click:Connect(function()
 		if tmsval then
 			tmsval = false
@@ -550,6 +568,7 @@ local function WXXF_fake_script()
 			itmhdr.Visible = false
 		end
 	end)
+	]]-- *DISABLED*
 	
 	--[[ TEAMS SECTION ]]--
 	tmsmnm.MouseButton1Click:Connect(function()
@@ -666,6 +685,11 @@ local function WXXF_fake_script()
 	end)
 	
 	btsbt.MouseButton1Click:Connect(function()
+		local tl1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+		local tl2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+		local tl3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+		local tl4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+		local tl5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
 		tl1.BinType = "Clone"
 		tl2.BinType = "GameTool"
 		tl3.BinType = "Hammer"
@@ -683,7 +707,9 @@ local function WXXF_fake_script()
 		})
 	end)
 	
-	--resbt
+	resbt.MouseButton1Click:Connect(function()
+		rmldc:InvokeServer(mf)
+	end)
 	
 	ivbbt.MouseButton1Click:Connect(function()
 		local Local = game:GetService('Players').LocalPlayer
@@ -741,8 +767,8 @@ local function WXXF_fake_script()
 		})
 	end)
 end
-coroutine.wrap(WXXF_fake_script)()
-local function HPCKM_fake_script()
+coroutine.wrap(NTXS_fake_script)()
+local function FQZQK_fake_script()
 	local script = Instance.new('LocalScript', TeamsHeader)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -785,8 +811,8 @@ local function HPCKM_fake_script()
 		end
 	end)
 end
-coroutine.wrap(HPCKM_fake_script)()
-local function SZAJK_fake_script()
+coroutine.wrap(FQZQK_fake_script)()
+local function VXZQATA_fake_script()
 	local script = Instance.new('LocalScript', MainHeader)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -829,8 +855,8 @@ local function SZAJK_fake_script()
 		end
 	end)
 end
-coroutine.wrap(SZAJK_fake_script)()
-local function AXAA_fake_script()
+coroutine.wrap(VXZQATA_fake_script)()
+local function XTCS_fake_script()
 	local script = Instance.new('LocalScript', ItemsHeader)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -873,8 +899,8 @@ local function AXAA_fake_script()
 		end
 	end)
 end
-coroutine.wrap(AXAA_fake_script)()
-local function PCKRE_fake_script()
+coroutine.wrap(XTCS_fake_script)()
+local function ZYGXTFW_fake_script()
 	local script = Instance.new('LocalScript', LocalHeader)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -917,4 +943,4 @@ local function PCKRE_fake_script()
 		end
 	end)
 end
-coroutine.wrap(PCKRE_fake_script)()
+coroutine.wrap(ZYGXTFW_fake_script)()
