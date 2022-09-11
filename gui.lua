@@ -1,946 +1,827 @@
--- by aeg
--- we do a lot of trolling
-
-local AegsPrisonLifeGui = Instance.new("ScreenGui")
-local TeamsHeader = Instance.new("Frame")
-local TeamsMenu = Instance.new("Frame")
-local Guards = Instance.new("TextButton")
-local Inmates = Instance.new("TextButton")
-local Criminals = Instance.new("TextButton")
-local TeamsMinimizer = Instance.new("TextButton")
-local TeamsText = Instance.new("TextLabel")
-local MainHeader = Instance.new("Frame")
-local MainMenu = Instance.new("Frame")
-local TextBox = Instance.new("TextBox")
+-- dont skid my shit
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local MainScreen = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Discord = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Unlock = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local TextBox = Instance.new("TextBox")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
 local TextLabel_2 = Instance.new("TextLabel")
-local TextBox_2 = Instance.new("TextBox")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
 local TextLabel_3 = Instance.new("TextLabel")
-local MainText = Instance.new("TextLabel")
-local MainMinimizer = Instance.new("TextButton")
-local ItemsHeader = Instance.new("Frame")
-local ItemsMenu = Instance.new("Frame")
-local AK47 = Instance.new("TextButton")
-local R870 = Instance.new("TextButton")
-local M9 = Instance.new("TextButton")
-local Omega = Instance.new("TextButton")
-local ItemsText = Instance.new("TextLabel")
-local ItemsMinimizer = Instance.new("TextButton")
-local LocalHeader = Instance.new("Frame")
-local LocalMenu = Instance.new("Frame")
-local God = Instance.new("TextButton")
-local Noclip = Instance.new("TextButton")
-local Reset = Instance.new("TextButton")
-local Walkspeed = Instance.new("TextBox")
-local Jumppower = Instance.new("TextBox")
-local Fly = Instance.new("TextButton")
-local Btools = Instance.new("TextButton")
-local Invisible = Instance.new("TextButton")
-local Set = Instance.new("TextButton")
-local ItemsText_2 = Instance.new("TextLabel")
-local LocalMinimizer = Instance.new("TextButton")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local TextLabel_4 = Instance.new("TextLabel")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local TextLabel_5 = Instance.new("TextLabel")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local TextLabel_6 = Instance.new("TextLabel")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local TextLabel_7 = Instance.new("TextLabel")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local TextLabel_8 = Instance.new("TextLabel")
+local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local WelcomeScreen = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local Username = Instance.new("TextLabel")
+local MainButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local LocationsButton = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local ItemsButton = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local TeamsScreen = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Prisoners = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Criminals = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Guards = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local ItemsScreen = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Guns = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local Tools = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local Stick = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Mirror = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local LocationsScreen = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local Armory = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local Gate = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local Garage = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local Sewers = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local Tower = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local Bridge = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local Rooftop = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local Secret = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local RDoors = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local RTrees = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local RFences = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
 
-AegsPrisonLifeGui.Name = "Aegs Prison Life Gui"
-AegsPrisonLifeGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-AegsPrisonLifeGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-TeamsHeader.Name = "TeamsHeader"
-TeamsHeader.Parent = AegsPrisonLifeGui
-TeamsHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-TeamsHeader.BorderSizePixel = 0
-TeamsHeader.Position = UDim2.new(0.316145837, 0, 0.246871486, 0)
-TeamsHeader.Size = UDim2.new(0, 175, 0, 20)
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-TeamsMenu.Name = "TeamsMenu"
-TeamsMenu.Parent = TeamsHeader
-TeamsMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TeamsMenu.BorderSizePixel = 0
-TeamsMenu.Position = UDim2.new(-0.00264875148, 0, 0.992601037, 0)
-TeamsMenu.Size = UDim2.new(0, 175, 0, 198)
+Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, 0, 0.511316895, 0)
+Frame.Size = UDim2.new(0.399895728, 0, 0.511316895, 0)
 
-Guards.Name = "Guards"
-Guards.Parent = TeamsMenu
-Guards.BackgroundColor3 = Color3.fromRGB(102, 142, 216)
-Guards.BorderSizePixel = 0
-Guards.Position = UDim2.new(0.137285724, 0, 0.270707041, 0)
-Guards.Size = UDim2.new(0, 125, 0, 35)
-Guards.Font = Enum.Font.SourceSansItalic
-Guards.Text = "Guards"
-Guards.TextColor3 = Color3.fromRGB(0, 0, 0)
-Guards.TextScaled = true
-Guards.TextSize = 14.000
-Guards.TextWrapped = true
+MainScreen.Name = "MainScreen"
+MainScreen.Parent = Frame
+MainScreen.AnchorPoint = Vector2.new(0.5, 0.5)
+MainScreen.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainScreen.BorderSizePixel = 0
+MainScreen.Position = UDim2.new(0.224250332, 0, 0.498993933, 0)
+MainScreen.Size = UDim2.new(0.449804425, 0, 1, 0)
 
-Inmates.Name = "Inmates"
-Inmates.Parent = TeamsMenu
-Inmates.BackgroundColor3 = Color3.fromRGB(255, 190, 78)
-Inmates.BorderSizePixel = 0
-Inmates.Position = UDim2.new(0.137285724, 0, 0.470707089, 0)
-Inmates.Size = UDim2.new(0, 125, 0, 35)
-Inmates.Font = Enum.Font.SourceSansItalic
-Inmates.Text = "Inmates"
-Inmates.TextColor3 = Color3.fromRGB(0, 0, 0)
-Inmates.TextScaled = true
-Inmates.TextSize = 14.000
-Inmates.TextWrapped = true
+UICorner.Parent = MainScreen
 
-Criminals.Name = "Criminals"
-Criminals.Parent = TeamsMenu
-Criminals.BackgroundColor3 = Color3.fromRGB(255, 69, 72)
-Criminals.BorderSizePixel = 0
-Criminals.Position = UDim2.new(0.137285724, 0, 0.670707107, 0)
-Criminals.Size = UDim2.new(0, 125, 0, 35)
-Criminals.Font = Enum.Font.SourceSansItalic
-Criminals.Text = "Criminals"
-Criminals.TextColor3 = Color3.fromRGB(0, 0, 0)
-Criminals.TextScaled = true
-Criminals.TextSize = 14.000
-Criminals.TextWrapped = true
-
-TeamsMinimizer.Name = "TeamsMinimizer"
-TeamsMinimizer.Parent = TeamsHeader
-TeamsMinimizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TeamsMinimizer.BackgroundTransparency = 1.000
-TeamsMinimizer.BorderSizePixel = 0
-TeamsMinimizer.Position = UDim2.new(0, 150, 0, 1)
-TeamsMinimizer.Size = UDim2.new(0, 25, 0, 19)
-TeamsMinimizer.Font = Enum.Font.Roboto
-TeamsMinimizer.Text = "_"
-TeamsMinimizer.TextColor3 = Color3.fromRGB(255, 255, 255)
-TeamsMinimizer.TextScaled = true
-TeamsMinimizer.TextSize = 14.000
-TeamsMinimizer.TextWrapped = true
-
-TeamsText.Name = "TeamsText"
-TeamsText.Parent = TeamsHeader
-TeamsText.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TeamsText.BorderSizePixel = 0
-TeamsText.Position = UDim2.new(0, 0, 1, 0)
-TeamsText.Size = UDim2.new(0, 175, 0, 30)
-TeamsText.Font = Enum.Font.Gotham
-TeamsText.Text = "TEAMS"
-TeamsText.TextColor3 = Color3.fromRGB(255, 255, 255)
-TeamsText.TextScaled = true
-TeamsText.TextSize = 14.000
-TeamsText.TextWrapped = true
-
-MainHeader.Name = "MainHeader"
-MainHeader.Parent = AegsPrisonLifeGui
-MainHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-MainHeader.BorderSizePixel = 0
-MainHeader.Position = UDim2.new(0.123958349, 0, 0.246871486, 0)
-MainHeader.Size = UDim2.new(0, 350, 0, 20)
-
-MainMenu.Name = "MainMenu"
-MainMenu.Parent = MainHeader
-MainMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainMenu.BorderSizePixel = 0
-MainMenu.Position = UDim2.new(0, 0, 2.50000072, 0)
-MainMenu.Size = UDim2.new(0, 350, 0, 98)
-
-TextBox.Parent = MainMenu
-TextBox.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.392857134, 0, 0.10204082, 0)
-TextBox.Size = UDim2.new(0, 173, 0, 28)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.SourceSansItalic
-TextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.PlaceholderText = "discord.gg/JAs3nCpBUp"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-
-TextLabel.Parent = MainMenu
+TextLabel.Parent = MainScreen
+TextLabel.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0, 0, 0.0918367356, 0)
-TextLabel.Size = UDim2.new(0, 137, 0, 29)
-TextLabel.Font = Enum.Font.Code
-TextLabel.Text = "Discord:"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0.498550713, 0, 0.997987866, 0)
+TextLabel.Size = UDim2.new(1, 0, 0.0643863156, 0)
+TextLabel.Font = Enum.Font.GrenzeGotisch
+TextLabel.Text = "made by aegeiss"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
-TextLabel_2.Parent = MainMenu
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 32
+
+Discord.Name = "Discord"
+Discord.Parent = MainScreen
+Discord.AnchorPoint = Vector2.new(0.5, 0.5)
+Discord.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Discord.BorderSizePixel = 0
+Discord.Position = UDim2.new(0.249275357, 0, 0.94969815, 0)
+Discord.Size = UDim2.new(0.434782594, 0, 0.0744466782, 0)
+Discord.Font = Enum.Font.Gotham
+Discord.Text = "Join Discord"
+Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discord.TextScaled = true
+Discord.TextSize = 20.000
+Discord.TextWrapped = true
+
+UICorner_2.Parent = Discord
+
+UITextSizeConstraint_2.Parent = Discord
+UITextSizeConstraint_2.MaxTextSize = 20
+
+Unlock.Name = "Unlock"
+Unlock.Parent = MainScreen
+Unlock.AnchorPoint = Vector2.new(0.5, 0.5)
+Unlock.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Unlock.BorderSizePixel = 0
+Unlock.Position = UDim2.new(0.747826099, 0, 0.94969815, 0)
+Unlock.Size = UDim2.new(0.434782594, 0, 0.0744466782, 0)
+Unlock.Font = Enum.Font.Gotham
+Unlock.Text = "Unlock FPS"
+Unlock.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unlock.TextScaled = true
+Unlock.TextSize = 20.000
+Unlock.TextWrapped = true
+
+UICorner_3.Parent = Unlock
+
+UITextSizeConstraint_3.Parent = Unlock
+UITextSizeConstraint_3.MaxTextSize = 20
+
+TextBox.Parent = MainScreen
+TextBox.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0347826071, 0, 0.231388301, 0)
+TextBox.Selectable = false
+TextBox.Size = UDim2.new(0.924637675, 0, 0.0764587522, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Code
+TextBox.ShowNativeInput = false
+TextBox.Text = "https://github.com/aeg-eus/prison-life-gui"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UITextSizeConstraint_4.Parent = TextBox
+UITextSizeConstraint_4.MaxTextSize = 14
+
+TextLabel_2.Parent = MainScreen
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0, 0, 0.408163249, 0)
-TextLabel_2.Size = UDim2.new(0, 137, 0, 29)
-TextLabel_2.Font = Enum.Font.Code
-TextLabel_2.Text = "Github:"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0.495652169, 0, 0.16096577, 0)
+TextLabel_2.Size = UDim2.new(0.530434787, 0, 0.0704225376, 0)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "Star the repo:"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
+TextLabel_2.TextSize = 22.000
 TextLabel_2.TextWrapped = true
 
-TextBox_2.Parent = MainMenu
-TextBox_2.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-TextBox_2.BorderSizePixel = 0
-TextBox_2.Position = UDim2.new(0.392857134, 0, 0.416326404, 0)
-TextBox_2.Size = UDim2.new(0, 173, 0, 28)
-TextBox_2.ClearTextOnFocus = false
-TextBox_2.Font = Enum.Font.SourceSansItalic
-TextBox_2.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.PlaceholderText = "github.com/aeg-eus"
-TextBox_2.Text = ""
-TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.TextScaled = true
-TextBox_2.TextSize = 14.000
-TextBox_2.TextWrapped = true
+UITextSizeConstraint_5.Parent = TextLabel_2
+UITextSizeConstraint_5.MaxTextSize = 22
 
-TextLabel_3.Parent = MainMenu
+TextLabel_3.Parent = MainScreen
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0)
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.357142955, 0, 0.704081655, 0)
-TextLabel_3.Size = UDim2.new(0, 224, 0, 29)
-TextLabel_3.Font = Enum.Font.SourceSansItalic
-TextLabel_3.Text = "this shit pretty trash but it work"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.Position = UDim2.new(0.498550713, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(1, 0, 0.0704225376, 0)
+TextLabel_3.Font = Enum.Font.GothamMedium
+TextLabel_3.Text = "PRISON LIFE GUI - v2.0"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
+TextLabel_3.TextSize = 22.000
 TextLabel_3.TextWrapped = true
 
-MainText.Name = "MainText"
-MainText.Parent = MainHeader
-MainText.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-MainText.BorderSizePixel = 0
-MainText.Position = UDim2.new(0, 0, 1, 0)
-MainText.Size = UDim2.new(0, 350, 0, 30)
-MainText.Font = Enum.Font.Gotham
-MainText.Text = "AEG'S PRISON LIFE GUI"
-MainText.TextColor3 = Color3.fromRGB(255, 255, 255)
-MainText.TextScaled = true
-MainText.TextSize = 14.000
-MainText.TextWrapped = true
+UITextSizeConstraint_6.Parent = TextLabel_3
+UITextSizeConstraint_6.MaxTextSize = 22
 
-MainMinimizer.Name = "MainMinimizer"
-MainMinimizer.Parent = MainHeader
-MainMinimizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainMinimizer.BackgroundTransparency = 1.000
-MainMinimizer.BorderSizePixel = 0
-MainMinimizer.Position = UDim2.new(0, 321, 0, 0)
-MainMinimizer.Size = UDim2.new(0, 25, 0, 19)
-MainMinimizer.Font = Enum.Font.Roboto
-MainMinimizer.Text = "_"
-MainMinimizer.TextColor3 = Color3.fromRGB(255, 255, 255)
-MainMinimizer.TextScaled = true
-MainMinimizer.TextSize = 14.000
-MainMinimizer.TextWrapped = true
+TextLabel_4.Parent = MainScreen
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.498550713, 0, 0.0704225302, 0)
+TextLabel_4.Size = UDim2.new(0.997101426, 0, 0.0442655943, 0)
+TextLabel_4.Font = Enum.Font.SourceSansItalic
+TextLabel_4.Text = "Complete Remake, Less Shitty UI"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 22.000
+TextLabel_4.TextWrapped = true
 
-ItemsHeader.Name = "ItemsHeader"
-ItemsHeader.Parent = AegsPrisonLifeGui
-ItemsHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-ItemsHeader.BorderSizePixel = 0
-ItemsHeader.Position = UDim2.new(0.421875, 0, 0.246871486, 0)
-ItemsHeader.Size = UDim2.new(0, 300, 0, 20)
+UITextSizeConstraint_7.Parent = TextLabel_4
+UITextSizeConstraint_7.MaxTextSize = 22
 
-ItemsMenu.Name = "ItemsMenu"
-ItemsMenu.Parent = ItemsHeader
-ItemsMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ItemsMenu.BorderSizePixel = 0
-ItemsMenu.Position = UDim2.new(0, 0, 0.992601037, 0)
-ItemsMenu.Size = UDim2.new(0, 300, 0, 198)
+TextLabel_5.Parent = MainScreen
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.498550713, 0, 0.611669958, 0)
+TextLabel_5.Size = UDim2.new(0.924637675, 0, 0.0704225376, 0)
+TextLabel_5.Font = Enum.Font.SourceSansLight
+TextLabel_5.Text = "V3rmillion: @aegean"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 22.000
+TextLabel_5.TextWrapped = true
 
-AK47.Name = "AK47"
-AK47.Parent = ItemsMenu
-AK47.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-AK47.BorderSizePixel = 0
-AK47.Position = UDim2.new(0.0336665846, 0, 0.200000033, 0)
-AK47.Size = UDim2.new(0, 279, 0, 30)
-AK47.Font = Enum.Font.SourceSansItalic
-AK47.Text = "AK47"
-AK47.TextColor3 = Color3.fromRGB(0, 0, 0)
-AK47.TextScaled = true
-AK47.TextSize = 14.000
-AK47.TextWrapped = true
+UITextSizeConstraint_8.Parent = TextLabel_5
+UITextSizeConstraint_8.MaxTextSize = 22
 
-R870.Name = "R870"
-R870.Parent = ItemsMenu
-R870.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-R870.BorderSizePixel = 0
-R870.Position = UDim2.new(0.0336665846, 0, 0.400000066, 0)
-R870.Size = UDim2.new(0, 279, 0, 30)
-R870.Font = Enum.Font.SourceSansItalic
-R870.Text = "R870"
-R870.TextColor3 = Color3.fromRGB(0, 0, 0)
-R870.TextScaled = true
-R870.TextSize = 14.000
-R870.TextWrapped = true
+TextLabel_6.Parent = MainScreen
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.498550713, 0, 0.682092488, 0)
+TextLabel_6.Size = UDim2.new(0.924637675, 0, 0.0704225376, 0)
+TextLabel_6.Font = Enum.Font.SourceSansLight
+TextLabel_6.Text = "Discord: aeg#0001 (914570803167756298)"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 22.000
+TextLabel_6.TextWrapped = true
 
-M9.Name = "M9"
-M9.Parent = ItemsMenu
-M9.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-M9.BorderSizePixel = 0
-M9.Position = UDim2.new(0.0336665846, 0, 0.599999964, 0)
-M9.Size = UDim2.new(0, 278, 0, 30)
-M9.Font = Enum.Font.SourceSansItalic
-M9.Text = "M9"
-M9.TextColor3 = Color3.fromRGB(0, 0, 0)
-M9.TextScaled = true
-M9.TextSize = 14.000
-M9.TextWrapped = true
+UITextSizeConstraint_9.Parent = TextLabel_6
+UITextSizeConstraint_9.MaxTextSize = 22
 
-Omega.Name = "Omega"
-Omega.Parent = ItemsMenu
-Omega.BackgroundColor3 = Color3.fromRGB(166, 166, 166)
-Omega.BorderSizePixel = 0
-Omega.Position = UDim2.new(0.0336665846, 0, 0.798989952, 0)
-Omega.Size = UDim2.new(0, 279, 0, 30)
-Omega.Font = Enum.Font.SourceSansItalic
-Omega.Text = "GIVE 'EM ALL"
-Omega.TextColor3 = Color3.fromRGB(0, 0, 0)
-Omega.TextScaled = true
-Omega.TextSize = 14.000
-Omega.TextWrapped = true
+TextLabel_7.Parent = MainScreen
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.498550713, 0, 0.541247427, 0)
+TextLabel_7.Size = UDim2.new(0.924637675, 0, 0.0704225376, 0)
+TextLabel_7.Font = Enum.Font.Gotham
+TextLabel_7.Text = "My socials:"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 22.000
+TextLabel_7.TextWrapped = true
 
-ItemsText.Name = "ItemsText"
-ItemsText.Parent = ItemsHeader
-ItemsText.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-ItemsText.BorderSizePixel = 0
-ItemsText.Position = UDim2.new(0, 0, 1, 0)
-ItemsText.Size = UDim2.new(0, 300, 0, 30)
-ItemsText.Font = Enum.Font.Gotham
-ItemsText.Text = "ITEMS"
-ItemsText.TextColor3 = Color3.fromRGB(255, 255, 255)
-ItemsText.TextScaled = true
-ItemsText.TextSize = 14.000
-ItemsText.TextWrapped = true
+UITextSizeConstraint_10.Parent = TextLabel_7
+UITextSizeConstraint_10.MaxTextSize = 22
 
-ItemsMinimizer.Name = "ItemsMinimizer"
-ItemsMinimizer.Parent = ItemsHeader
-ItemsMinimizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ItemsMinimizer.BackgroundTransparency = 1.000
-ItemsMinimizer.BorderSizePixel = 0
-ItemsMinimizer.Position = UDim2.new(0, 275, 0, 1)
-ItemsMinimizer.Size = UDim2.new(0, 25, 0, 19)
-ItemsMinimizer.Font = Enum.Font.Roboto
-ItemsMinimizer.Text = "_"
-ItemsMinimizer.TextColor3 = Color3.fromRGB(255, 255, 255)
-ItemsMinimizer.TextScaled = true
-ItemsMinimizer.TextSize = 14.000
-ItemsMinimizer.TextWrapped = true
+TextLabel_8.Parent = MainScreen
+TextLabel_8.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.498550713, 0, 0.392354071, 0)
+TextLabel_8.Size = UDim2.new(0.924637675, 0, 0.0704225376, 0)
+TextLabel_8.Font = Enum.Font.Gotham
+TextLabel_8.Text = "Press V to toggle the GUI"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 32, 36)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 22.000
+TextLabel_8.TextWrapped = true
 
-LocalHeader.Name = "LocalHeader"
-LocalHeader.Parent = AegsPrisonLifeGui
-LocalHeader.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-LocalHeader.BorderSizePixel = 0
-LocalHeader.Position = UDim2.new(0.591145813, 0, 0.246871486, 0)
-LocalHeader.Size = UDim2.new(0, 275, 0, 20)
+UITextSizeConstraint_11.Parent = TextLabel_8
+UITextSizeConstraint_11.MaxTextSize = 22
 
-LocalMenu.Name = "LocalMenu"
-LocalMenu.Parent = LocalHeader
-LocalMenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-LocalMenu.BorderSizePixel = 0
-LocalMenu.Position = UDim2.new(0, 0, 1, 0)
-LocalMenu.Size = UDim2.new(0, 275, 0, 197)
+WelcomeScreen.Name = "WelcomeScreen"
+WelcomeScreen.Parent = Frame
+WelcomeScreen.AnchorPoint = Vector2.new(0.5, 0.5)
+WelcomeScreen.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+WelcomeScreen.BorderSizePixel = 0
+WelcomeScreen.Position = UDim2.new(0.732724905, 0, 0.126760557, 0)
+WelcomeScreen.Size = UDim2.new(0.530638874, 0, 0.257545263, 0)
 
-God.Name = "God"
-God.Parent = LocalMenu
-God.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-God.BorderSizePixel = 0
-God.Position = UDim2.new(0.0327272713, 0, 0.400000095, 0)
-God.Size = UDim2.new(0, 125, 0, 30)
-God.Font = Enum.Font.SourceSansItalic
-God.Text = "God"
-God.TextColor3 = Color3.fromRGB(0, 0, 0)
-God.TextScaled = true
-God.TextSize = 14.000
-God.TextWrapped = true
+UICorner_4.Parent = WelcomeScreen
 
-Noclip.Name = "Noclip"
-Noclip.Parent = LocalMenu
-Noclip.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Noclip.BorderSizePixel = 0
-Noclip.Position = UDim2.new(0.0354381204, 0, 0.600000083, 0)
-Noclip.Size = UDim2.new(0, 125, 0, 30)
-Noclip.Font = Enum.Font.SourceSansItalic
-Noclip.Text = "Noclip"
-Noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
-Noclip.TextScaled = true
-Noclip.TextSize = 14.000
-Noclip.TextWrapped = true
+ImageLabel.Parent = WelcomeScreen
+ImageLabel.AnchorPoint = Vector2.new(1, 0.5)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.931203842, 0, 0.5, 0)
+ImageLabel.Size = UDim2.new(0.243243247, 0, 0.78125, 0)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
-Reset.Name = "Reset"
-Reset.Parent = LocalMenu
-Reset.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Reset.BorderSizePixel = 0
-Reset.Position = UDim2.new(0.0354381204, 0, 0.800000012, 0)
-Reset.Size = UDim2.new(0, 125, 0, 30)
-Reset.Font = Enum.Font.SourceSansItalic
-Reset.Text = "Reset"
-Reset.TextColor3 = Color3.fromRGB(0, 0, 0)
-Reset.TextScaled = true
-Reset.TextSize = 14.000
-Reset.TextWrapped = true
+TextLabel_9.Parent = WelcomeScreen
+TextLabel_9.AnchorPoint = Vector2.new(0.5, 0)
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.341523319, 0, 0.1328125, 0)
+TextLabel_9.Size = UDim2.new(0.498771489, 0, 0.1953125, 0)
+TextLabel_9.Font = Enum.Font.Gotham
+TextLabel_9.Text = "Welcome"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
 
-Walkspeed.Name = "Walkspeed"
-Walkspeed.Parent = LocalMenu
-Walkspeed.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Walkspeed.BorderSizePixel = 0
-Walkspeed.Position = UDim2.new(0.0327272713, 0, 0.197969541, 0)
-Walkspeed.Size = UDim2.new(0, 100, 0, 30)
-Walkspeed.Font = Enum.Font.SourceSansItalic
-Walkspeed.PlaceholderText = "Walkspeed..."
-Walkspeed.Text = ""
-Walkspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
-Walkspeed.TextSize = 14.000
+Username.Name = "Username"
+Username.Parent = WelcomeScreen
+Username.AnchorPoint = Vector2.new(0.5, 0)
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.341523319, 0, 0.390625, 0)
+Username.Size = UDim2.new(0.498771489, 0, 0.5, 0)
+Username.Font = Enum.Font.Gotham
+Username.Text = "reallylongusername"
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
+Username.TextScaled = true
+Username.TextSize = 14.000
+Username.TextWrapped = true
 
-Jumppower.Name = "Jumppower"
-Jumppower.Parent = LocalMenu
-Jumppower.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Jumppower.BorderSizePixel = 0
-Jumppower.Position = UDim2.new(0.603636384, 0, 0.197969541, 0)
-Jumppower.Size = UDim2.new(0, 100, 0, 30)
-Jumppower.Font = Enum.Font.SourceSansItalic
-Jumppower.PlaceholderText = "Jumppower..."
-Jumppower.Text = ""
-Jumppower.TextColor3 = Color3.fromRGB(0, 0, 0)
-Jumppower.TextSize = 14.000
-Jumppower.TextWrapped = true
+MainButton.Name = "MainButton"
+MainButton.Parent = Frame
+MainButton.AnchorPoint = Vector2.new(0.5, 0.5)
+MainButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainButton.BorderSizePixel = 0
+MainButton.Position = UDim2.new(0.64146024, 0, 0.342052281, 0)
+MainButton.Size = UDim2.new(0.349413306, 0, 0.0985915512, 0)
+MainButton.Font = Enum.Font.Gotham
+MainButton.Text = "Main Menu"
+MainButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainButton.TextSize = 25.000
+MainButton.TextWrapped = true
 
-Fly.Name = "Fly"
-Fly.Parent = LocalMenu
-Fly.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Fly.BorderSizePixel = 0
-Fly.Position = UDim2.new(0.50999999, 0, 0.400000095, 0)
-Fly.Size = UDim2.new(0, 125, 0, 30)
-Fly.Font = Enum.Font.SourceSansItalic
-Fly.Text = "Fly"
-Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
-Fly.TextScaled = true
-Fly.TextSize = 14.000
-Fly.TextWrapped = true
+UICorner_5.Parent = MainButton
 
-Btools.Name = "Btools"
-Btools.Parent = LocalMenu
-Btools.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Btools.BorderSizePixel = 0
-Btools.Position = UDim2.new(0.50999999, 0, 0.600000024, 0)
-Btools.Size = UDim2.new(0, 125, 0, 30)
-Btools.Font = Enum.Font.SourceSansItalic
-Btools.Text = "Btools"
-Btools.TextColor3 = Color3.fromRGB(0, 0, 0)
-Btools.TextScaled = true
-Btools.TextSize = 14.000
-Btools.TextWrapped = true
+LocationsButton.Name = "LocationsButton"
+LocationsButton.Parent = Frame
+LocationsButton.AnchorPoint = Vector2.new(0.5, 0.5)
+LocationsButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LocationsButton.BorderSizePixel = 0
+LocationsButton.Position = UDim2.new(0.64146024, 0, 0.591549277, 0)
+LocationsButton.Size = UDim2.new(0.349413306, 0, 0.0985915512, 0)
+LocationsButton.Font = Enum.Font.Gotham
+LocationsButton.Text = "Locations & Misc"
+LocationsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LocationsButton.TextSize = 25.000
+LocationsButton.TextWrapped = true
 
-Invisible.Name = "Invisible"
-Invisible.Parent = LocalMenu
-Invisible.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-Invisible.BorderSizePixel = 0
-Invisible.Position = UDim2.new(0.50999999, 0, 0.800000012, 0)
-Invisible.Size = UDim2.new(0, 125, 0, 30)
-Invisible.Font = Enum.Font.SourceSansItalic
-Invisible.Text = "Invisible"
-Invisible.TextColor3 = Color3.fromRGB(0, 0, 0)
-Invisible.TextScaled = true
-Invisible.TextSize = 14.000
-Invisible.TextWrapped = true
+UICorner_6.Parent = LocationsButton
 
-Set.Name = "Set"
-Set.Parent = LocalMenu
-Set.BackgroundColor3 = Color3.fromRGB(166, 166, 166)
-Set.BorderSizePixel = 0
-Set.Position = UDim2.new(0.426393837, 0, 0.200005233, 0)
-Set.Size = UDim2.new(0, 40, 0, 30)
-Set.Font = Enum.Font.Code
-Set.Text = "Set"
-Set.TextColor3 = Color3.fromRGB(0, 0, 0)
-Set.TextScaled = true
-Set.TextSize = 14.000
-Set.TextWrapped = true
+ItemsButton.Name = "ItemsButton"
+ItemsButton.Parent = Frame
+ItemsButton.AnchorPoint = Vector2.new(0.5, 0.5)
+ItemsButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ItemsButton.BorderSizePixel = 0
+ItemsButton.Position = UDim2.new(0.64146024, 0, 0.466800779, 0)
+ItemsButton.Size = UDim2.new(0.349413306, 0, 0.0985915512, 0)
+ItemsButton.Font = Enum.Font.Gotham
+ItemsButton.Text = "Teams & Items"
+ItemsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ItemsButton.TextSize = 25.000
+ItemsButton.TextWrapped = true
 
-ItemsText_2.Name = "ItemsText"
-ItemsText_2.Parent = LocalHeader
-ItemsText_2.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-ItemsText_2.BorderSizePixel = 0
-ItemsText_2.Position = UDim2.new(0, 0, 1, 0)
-ItemsText_2.Size = UDim2.new(0, 275, 0, 30)
-ItemsText_2.Font = Enum.Font.Gotham
-ItemsText_2.Text = "LOCAL"
-ItemsText_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ItemsText_2.TextScaled = true
-ItemsText_2.TextSize = 14.000
-ItemsText_2.TextWrapped = true
+UICorner_7.Parent = ItemsButton
 
-LocalMinimizer.Name = "LocalMinimizer"
-LocalMinimizer.Parent = LocalHeader
-LocalMinimizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-LocalMinimizer.BackgroundTransparency = 1.000
-LocalMinimizer.BorderSizePixel = 0
-LocalMinimizer.Position = UDim2.new(0, 250, 0, 1)
-LocalMinimizer.Size = UDim2.new(0, 25, 0, 19)
-LocalMinimizer.Font = Enum.Font.Roboto
-LocalMinimizer.Text = "_"
-LocalMinimizer.TextColor3 = Color3.fromRGB(255, 255, 255)
-LocalMinimizer.TextScaled = true
-LocalMinimizer.TextSize = 14.000
-LocalMinimizer.TextWrapped = true
+TeamsScreen.Name = "TeamsScreen"
+TeamsScreen.Parent = Frame
+TeamsScreen.AnchorPoint = Vector2.new(0.5, 0.5)
+TeamsScreen.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TeamsScreen.BorderSizePixel = 0
+TeamsScreen.Position = UDim2.new(0.224250332, 0, 0.235412464, 0)
+TeamsScreen.Size = UDim2.new(0.449804425, 0, 0.478873253, 0)
+TeamsScreen.Visible = false
 
-local function NTXS_fake_script()
-	local script = Instance.new('LocalScript', AegsPrisonLifeGui)
+UICorner_8.Parent = TeamsScreen
+
+Prisoners.Name = "Prisoners"
+Prisoners.Parent = TeamsScreen
+Prisoners.AnchorPoint = Vector2.new(0.5, 0.5)
+Prisoners.BackgroundColor3 = Color3.fromRGB(218, 133, 65)
+Prisoners.BorderSizePixel = 0
+Prisoners.Position = UDim2.new(0.498550713, 0, 0.49999997, 0)
+Prisoners.Size = UDim2.new(0.747826099, 0, 0.222689077, 0)
+Prisoners.Font = Enum.Font.Gotham
+Prisoners.Text = "Prisoner"
+Prisoners.TextColor3 = Color3.fromRGB(255, 255, 255)
+Prisoners.TextSize = 25.000
+Prisoners.TextWrapped = true
+
+UICorner_9.Parent = Prisoners
+
+Criminals.Name = "Criminals"
+Criminals.Parent = TeamsScreen
+Criminals.AnchorPoint = Vector2.new(0.5, 0.5)
+Criminals.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Criminals.BorderSizePixel = 0
+Criminals.Position = UDim2.new(0.498550713, 0, 0.79831928, 0)
+Criminals.Size = UDim2.new(0.747826099, 0, 0.222689077, 0)
+Criminals.Font = Enum.Font.Gotham
+Criminals.Text = "Criminal"
+Criminals.TextColor3 = Color3.fromRGB(255, 255, 255)
+Criminals.TextSize = 25.000
+Criminals.TextWrapped = true
+
+UICorner_10.Parent = Criminals
+
+Guards.Name = "Guards"
+Guards.Parent = TeamsScreen
+Guards.AnchorPoint = Vector2.new(0.5, 0.5)
+Guards.BackgroundColor3 = Color3.fromRGB(13, 105, 172)
+Guards.BorderSizePixel = 0
+Guards.Position = UDim2.new(0.498550713, 0, 0.19747898, 0)
+Guards.Size = UDim2.new(0.747826099, 0, 0.222689077, 0)
+Guards.Font = Enum.Font.Gotham
+Guards.Text = "Guard"
+Guards.TextColor3 = Color3.fromRGB(255, 255, 255)
+Guards.TextSize = 25.000
+Guards.TextWrapped = true
+
+UICorner_11.Parent = Guards
+
+ItemsScreen.Name = "ItemsScreen"
+ItemsScreen.Parent = Frame
+ItemsScreen.AnchorPoint = Vector2.new(0.5, 0.5)
+ItemsScreen.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ItemsScreen.BorderSizePixel = 0
+ItemsScreen.Position = UDim2.new(0.224250332, 0, 0.756539166, 0)
+ItemsScreen.Size = UDim2.new(0.449804425, 0, 0.478873253, 0)
+ItemsScreen.Visible = false
+
+UICorner_12.Parent = ItemsScreen
+
+Guns.Name = "Guns"
+Guns.Parent = ItemsScreen
+Guns.AnchorPoint = Vector2.new(0.5, 0.5)
+Guns.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Guns.BorderSizePixel = 0
+Guns.Position = UDim2.new(0.498550713, 0, 0.19747898, 0)
+Guns.Size = UDim2.new(0.898550749, 0, 0.14705883, 0)
+Guns.Font = Enum.Font.Gotham
+Guns.Text = "Give All Guns"
+Guns.TextColor3 = Color3.fromRGB(255, 255, 255)
+Guns.TextSize = 20.000
+Guns.TextWrapped = true
+
+UICorner_13.Parent = Guns
+
+Tools.Name = "Tools"
+Tools.Parent = ItemsScreen
+Tools.AnchorPoint = Vector2.new(0.5, 0.5)
+Tools.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Tools.BorderSizePixel = 0
+Tools.Position = UDim2.new(0.498550713, 0, 0.39915964, 0)
+Tools.Size = UDim2.new(0.898550749, 0, 0.14705883, 0)
+Tools.Font = Enum.Font.Gotham
+Tools.Text = "Give All Tools"
+Tools.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tools.TextSize = 20.000
+Tools.TextWrapped = true
+
+UICorner_14.Parent = Tools
+
+Stick.Name = "Stick"
+Stick.Parent = ItemsScreen
+Stick.AnchorPoint = Vector2.new(0.5, 0.5)
+Stick.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Stick.BorderSizePixel = 0
+Stick.Position = UDim2.new(0.498550713, 0, 0.59663862, 0)
+Stick.Size = UDim2.new(0.898550749, 0, 0.14705883, 0)
+Stick.Font = Enum.Font.Gotham
+Stick.Text = "Give \"Extendo mirror\" (Secret)"
+Stick.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stick.TextSize = 20.000
+Stick.TextWrapped = true
+
+UICorner_15.Parent = Stick
+
+Mirror.Name = "Mirror"
+Mirror.Parent = ItemsScreen
+Mirror.AnchorPoint = Vector2.new(0.5, 0.5)
+Mirror.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Mirror.BorderSizePixel = 0
+Mirror.Position = UDim2.new(0.498550713, 0, 0.79831928, 0)
+Mirror.Size = UDim2.new(0.898550749, 0, 0.14705883, 0)
+Mirror.Font = Enum.Font.Gotham
+Mirror.Text = "Give \"Sharpened stick\" (Secret)"
+Mirror.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mirror.TextSize = 20.000
+Mirror.TextWrapped = true
+
+UICorner_16.Parent = Mirror
+
+LocationsScreen.Name = "LocationsScreen"
+LocationsScreen.Parent = Frame
+LocationsScreen.AnchorPoint = Vector2.new(0.5, 0.5)
+LocationsScreen.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LocationsScreen.BorderSizePixel = 0
+LocationsScreen.Position = UDim2.new(0.224250332, 0, 0.319919497, 0)
+LocationsScreen.Size = UDim2.new(0.449804425, 0, 0.641851127, 0)
+LocationsScreen.Visible = false
+
+UICorner_17.Parent = LocationsScreen
+
+Armory.Name = "Armory"
+Armory.Parent = LocationsScreen
+Armory.AnchorPoint = Vector2.new(0, 0.5)
+Armory.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Armory.BorderSizePixel = 0
+Armory.Position = UDim2.new(0.049275361, 0, 0.0971786752, 0)
+Armory.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Armory.Font = Enum.Font.Gotham
+Armory.Text = "Armory"
+Armory.TextColor3 = Color3.fromRGB(255, 255, 255)
+Armory.TextSize = 22.000
+Armory.TextWrapped = true
+
+UICorner_18.Parent = Armory
+
+Gate.Name = "Gate"
+Gate.Parent = LocationsScreen
+Gate.AnchorPoint = Vector2.new(0, 0.5)
+Gate.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Gate.BorderSizePixel = 0
+Gate.Position = UDim2.new(0.524637699, 0, 0.0971786752, 0)
+Gate.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Gate.Font = Enum.Font.Gotham
+Gate.Text = "Prison Gate"
+Gate.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gate.TextSize = 22.000
+Gate.TextWrapped = true
+
+UICorner_19.Parent = Gate
+
+Garage.Name = "Garage"
+Garage.Parent = LocationsScreen
+Garage.AnchorPoint = Vector2.new(0, 0.5)
+Garage.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Garage.BorderSizePixel = 0
+Garage.Position = UDim2.new(0.524637699, 0, 0.34796235, 0)
+Garage.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Garage.Font = Enum.Font.Gotham
+Garage.Text = "Garage"
+Garage.TextColor3 = Color3.fromRGB(255, 255, 255)
+Garage.TextSize = 22.000
+Garage.TextWrapped = true
+
+UICorner_20.Parent = Garage
+
+Sewers.Name = "Sewers"
+Sewers.Parent = LocationsScreen
+Sewers.AnchorPoint = Vector2.new(0, 0.5)
+Sewers.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Sewers.BorderSizePixel = 0
+Sewers.Position = UDim2.new(0.049275361, 0, 0.222570509, 0)
+Sewers.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Sewers.Font = Enum.Font.Gotham
+Sewers.Text = "Sewers"
+Sewers.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sewers.TextSize = 22.000
+Sewers.TextWrapped = true
+
+UICorner_21.Parent = Sewers
+
+Tower.Name = "Tower"
+Tower.Parent = LocationsScreen
+Tower.AnchorPoint = Vector2.new(0, 0.5)
+Tower.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Tower.BorderSizePixel = 0
+Tower.Position = UDim2.new(0.524637699, 0, 0.222570509, 0)
+Tower.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Tower.Font = Enum.Font.Gotham
+Tower.Text = "Yard Tower"
+Tower.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tower.TextSize = 22.000
+Tower.TextWrapped = true
+
+UICorner_22.Parent = Tower
+
+Bridge.Name = "Bridge"
+Bridge.Parent = LocationsScreen
+Bridge.AnchorPoint = Vector2.new(0, 0.5)
+Bridge.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Bridge.BorderSizePixel = 0
+Bridge.Position = UDim2.new(0.049275361, 0, 0.34796235, 0)
+Bridge.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Bridge.Font = Enum.Font.Gotham
+Bridge.Text = "Bridge Base"
+Bridge.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bridge.TextSize = 22.000
+Bridge.TextWrapped = true
+
+UICorner_23.Parent = Bridge
+
+Rooftop.Name = "Rooftop"
+Rooftop.Parent = LocationsScreen
+Rooftop.AnchorPoint = Vector2.new(0, 0.5)
+Rooftop.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Rooftop.BorderSizePixel = 0
+Rooftop.Position = UDim2.new(0.524637699, 0, 0.473354191, 0)
+Rooftop.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Rooftop.Font = Enum.Font.Gotham
+Rooftop.Text = "Rooftop"
+Rooftop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Rooftop.TextSize = 22.000
+Rooftop.TextWrapped = true
+
+UICorner_24.Parent = Rooftop
+
+Secret.Name = "Secret"
+Secret.Parent = LocationsScreen
+Secret.AnchorPoint = Vector2.new(0, 0.5)
+Secret.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Secret.BorderSizePixel = 0
+Secret.Position = UDim2.new(0.049275361, 0, 0.473354191, 0)
+Secret.Size = UDim2.new(0.423188418, 0, 0.0971786827, 0)
+Secret.Font = Enum.Font.Gotham
+Secret.Text = "Secret Room"
+Secret.TextColor3 = Color3.fromRGB(255, 255, 255)
+Secret.TextSize = 22.000
+Secret.TextWrapped = true
+
+UICorner_25.Parent = Secret
+
+RDoors.Name = "RDoors"
+RDoors.Parent = LocationsScreen
+RDoors.AnchorPoint = Vector2.new(0, 0.5)
+RDoors.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+RDoors.BorderSizePixel = 0
+RDoors.Position = UDim2.new(0.049275361, 0, 0.639498353, 0)
+RDoors.Size = UDim2.new(0.898550749, 0, 0.0971786827, 0)
+RDoors.Font = Enum.Font.Gotham
+RDoors.Text = "Remove Doors"
+RDoors.TextColor3 = Color3.fromRGB(255, 255, 255)
+RDoors.TextSize = 22.000
+RDoors.TextWrapped = true
+
+UICorner_26.Parent = RDoors
+
+RTrees.Name = "RTrees"
+RTrees.Parent = LocationsScreen
+RTrees.AnchorPoint = Vector2.new(0, 0.5)
+RTrees.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+RTrees.BorderSizePixel = 0
+RTrees.Position = UDim2.new(0.049275361, 0, 0.764890194, 0)
+RTrees.Size = UDim2.new(0.898550749, 0, 0.0971786827, 0)
+RTrees.Font = Enum.Font.Gotham
+RTrees.Text = "Remove Trees"
+RTrees.TextColor3 = Color3.fromRGB(255, 255, 255)
+RTrees.TextSize = 22.000
+RTrees.TextWrapped = true
+
+UICorner_27.Parent = RTrees
+
+RFences.Name = "RFences"
+RFences.Parent = LocationsScreen
+RFences.AnchorPoint = Vector2.new(0, 0.5)
+RFences.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+RFences.BorderSizePixel = 0
+RFences.Position = UDim2.new(0.049275361, 0, 0.890282035, 0)
+RFences.Size = UDim2.new(0.898550749, 0, 0.0971786827, 0)
+RFences.Font = Enum.Font.Gotham
+RFences.Text = "Remove Fences"
+RFences.TextColor3 = Color3.fromRGB(255, 255, 255)
+RFences.TextSize = 22.000
+RFences.TextWrapped = true
+
+UICorner_28.Parent = RFences
+
+local function MainScreenScript()
+	local script = Instance.new('LocalScript', MainScreen)
+
+	script.Parent.Discord.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/rwuffwNnRK")
+		script.Parent.Discord.Text = "Copied"
+		wait(1.5)
+		script.Parent.Discord.Text = "Join Discord"
+	end)
+	script.Parent.Unlock.MouseButton1Click:Connect(function()
+		setfpscap(0)
+		script.Parent.Unlock.Text = "Unlocked FPS"
+	end)
 	
-	local mf = game:GetService("Players").LocalPlayer
-	local mse = mf:GetMouse()
-	
-	local rmtms = game:GetService("Workspace").Remote.TeamEvent
-	local rmldc = game:GetService("Workspace").Remote.loadchar
-	local rmitm = game:GetService("Workspace").Remote.ItemHandler
-	
-	local minmnu = script.Parent.MainHeader.MainMenu
-	local tmsmnu = script.Parent.TeamsHeader.TeamsMenu
-	local itmmnu = script.Parent.ItemsHeader.ItemsMenu
-	local lclmnu = script.Parent.LocalHeader.LocalMenu
-	
-	local grd = script.Parent.TeamsHeader.TeamsMenu.Guards
-	local inm = script.Parent.TeamsHeader.TeamsMenu.Inmates
-	local crm = script.Parent.TeamsHeader.TeamsMenu.Criminals
-	
-	local grdclr = "Bright blue"
-	local inmclr = "Bright orange"
-	
-	local tmshdr = script.Parent.TeamsHeader
-	local itmhdr = script.Parent.ItemsHeader
-	local lclhdr = script.Parent.LocalHeader
-	
-	local tmsmnm = script.Parent.TeamsHeader.TeamsMinimizer
-	local itmmnm = script.Parent.ItemsHeader.ItemsMinimizer
-	local lclmnm = script.Parent.LocalHeader.LocalMinimizer
-	
-	local tmsval = true
-	local lclval = true
-	local itmval = true
-	
-	local tmsmnmval = true
-	local lclmnmval = true
-	local itmmnmval = true
-	
-	local akbt = script.Parent.ItemsHeader.ItemsMenu.AK47
-	local rtbt = script.Parent.ItemsHeader.ItemsMenu.R870
-	local bmbt = script.Parent.ItemsHeader.ItemsMenu.M9
-	local ogbt = script.Parent.ItemsHeader.ItemsMenu.Omega
-	
-	local setbt = script.Parent.LocalHeader.LocalMenu.Set
-	local godbt = script.Parent.LocalHeader.LocalMenu.God
-	local flybt = script.Parent.LocalHeader.LocalMenu.Fly
-	local ncpbt = script.Parent.LocalHeader.LocalMenu.Noclip
-	local btsbt = script.Parent.LocalHeader.LocalMenu.Btools
-	local resbt = script.Parent.LocalHeader.LocalMenu.Reset
-	local ivbbt = script.Parent.LocalHeader.LocalMenu.Invisible
-	
-	local ak47 = game:GetService("Workspace")["Prison_ITEMS"].giver["AK-47"].ITEMPICKUP
-	local r870 = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP
-	local m9 = game:GetService("Workspace")["Prison_ITEMS"].giver.M9.ITEMPICKUP
-	
-	local wsbx = script.Parent.LocalHeader.LocalMenu.Walkspeed
-	local jpbx = script.Parent.LocalHeader.LocalMenu.Jumppower
-	
-	-- *DISABLED* local kybt = script.Parent.ItemsHeader.ItemsMenu.Key
-	-- *DISABLED* local knbt = script.Parent.ItemsHeader.ItemsMenu.Knife
-	-- *DISABLED* local hmbt = script.Parent.ItemsHeader.ItemsMenu.Hammer
-	
-	-- *DISABLED* local key = game:GetService("Workspace")["Prison_ITEMS"].single["Key card"].ITEMPICKUP
-	-- *DISABLED* local knife = game:GetService("Workspace")["Prison_ITEMS"].single["Crude Knife"].ITEMPICKUP
-	-- *DISABLED* local hammer = game:GetService("Workspace")["Prison_ITEMS"].single.Hammer.ITEMPICKUP
-	
-	--[[ MAIN SECTION ]]--
-	--[[ *DISABLED*
-	tms.MouseButton1Click:Connect(function()
-		if tmsval then
-			tmsval = false
-			tmshdr.Visible = true
-		else
-			tmsval = true
-			tmshdr.Visible = false
+end
+coroutine.wrap(MainScreenScript)()
+local function WelcomeScreenScript()
+	local script = Instance.new('LocalScript', WelcomeScreen)
+
+	script.Parent.ImageLabel.Image = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId, Enum.ThumbnailType.AvatarBust, Enum.ThumbnailSize.Size100x100)
+	script.Parent.Username.Text = game:GetService("Players").LocalPlayer.Name
+end
+coroutine.wrap(WelcomeScreenScript)()
+local function FrameIndexScript()
+	local script = Instance.new('LocalScript', Frame)
+
+	game:GetService("Players").LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+		if key == "v" and not script.Parent.Visible then
+			script.Parent.Visible = true
+		elseif key == "v" and script.Parent.Visible then
+			script.Parent.Visible = false
 		end
 	end)
-	
-	itm.MouseButton1Click:Connect(function()
-		if itmval then
-			itmval = false
-			itmhdr.Visible = true
-		else
-			itmval = true
-			itmhdr.Visible = false
-		end
+	script.Parent.MainButton.MouseButton1Click:Connect(function()
+		script.Parent.MainScreen.Visible = true
+		script.Parent.LocationsScreen.Visible = false
+		script.Parent.TeamsScreen.Visible = false
+		script.Parent.ItemsScreen.Visible = false
 	end)
-	]]-- *DISABLED*
-	
-	--[[ TEAMS SECTION ]]--
-	tmsmnm.MouseButton1Click:Connect(function()
-		if tmsmnmval then
-			tmsmnmval = false
-			tmsmnu.Visible = false
-		else
-			tmsmnmval = true
-			tmsmnu.Visible = true
-		end
+	script.Parent.ItemsButton.MouseButton1Click:Connect(function()
+		script.Parent.MainScreen.Visible = false
+		script.Parent.LocationsScreen.Visible = false
+		script.Parent.TeamsScreen.Visible = true
+		script.Parent.ItemsScreen.Visible = true
 	end)
-	
-	
-	grd.MouseButton1Click:Connect(function()
-		rmtms:FireServer(grdclr)
-		rmldc:InvokeServer(mf)
-	end)
-	
-	inm.MouseButton1Click:Connect(function()
-		rmtms:FireServer(inmclr)
-		rmldc:InvokeServer(mf)
-	end)
-	
-	crm.MouseButton1Click:Connect(function()
-		mf.Character.HumanoidRootPart.CFrame = CFrame.new(-975.875671, 109.323792, 2053.86353, -1.95577741e-08, -7.28214857e-08, -1, -6.83960479e-08, 1, -7.28214715e-08, 1, 6.83960479e-08, -1.95577741e-08)
-	end)
-	
-	--[[ ITEMS SECTION ]]--
-	itmmnm.MouseButton1Click:Connect(function()
-		if itmmnmval then
-			itmmnmval = false
-			itmmnu.Visible = false
-		else
-			itmmnmval = true
-			itmmnu.Visible = true
-		end
-	end)
-	
-	akbt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(ak47)
-	end)
-	
-	rtbt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(r870)
-	end)
-	
-	bmbt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(m9)
-	end)
-	
-	--[[ *DISABLED*
-	kybt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(key)
-	end)
-	
-	knbt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(knife)
-	end)
-	
-	hmbt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(hammer)
-	end)
-	]]-- *DISABLED*
-	
-	ogbt.MouseButton1Click:Connect(function()
-		rmitm:InvokeServer(ak47)
-		rmitm:InvokeServer(r870)
-		rmitm:InvokeServer(m9)
-	end)
-	
-	--[[ LOCAL SECTION ]]--
-	lclmnm.MouseButton1Click:Connect(function()
-		if lclmnmval then
-			lclmnmval = false
-			lclmnu.Visible = false
-		else
-			lclmnmval = true
-			lclmnu.Visible = true
-		end
-	end)
-	
-	setbt.MouseButton1Click:Connect(function()
-		if wsbx.Text ~= "" then
-			mf.Character.Humanoid.Walkspeed = wsbx.Text
-		end
-		if jpbx.Text ~= "" then
-			mf.Character.Humanoid.Jumppower = jpbx.Text
-		end
-	end)
-	
-	godbt.MouseButton1Click:Connect(function()
-		mf.Character.Humanoid:Remove()
-		Instance.new("Humanoid", mf.Character)
-	end)
-	
-	ncpbt.MouseButton1Click:Connect(function()
-		local noclip = false
-		game:GetService('RunService').Stepped:Connect(function()
-			if noclip then
-				mf.Character.Humanoid:ChangeState(11)
-			end
-		end)
-		mse.KeyDown:Connect(function(key)
-			if key == "e" then
-				noclip = not noclip
-				mf.Character.Humanoid:ChangeState(11)
-			end
-		end)
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "AEG'S PRISON LIFE GUI";
-			Text = "Noclip loaded. Press E To Toggle On/Off.";
-			Duration = "10";
-		})
-	end)
-	
-	btsbt.MouseButton1Click:Connect(function()
-		local tl1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-		local tl2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-		local tl3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-		local tl4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-		local tl5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-		tl1.BinType = "Clone"
-		tl2.BinType = "GameTool"
-		tl3.BinType = "Hammer"
-		tl4.BinType = "Script"
-		tl5.BinType = "Grab"
-		tl1:Destroy()
-		tl2:Destroy()
-		tl3:Destroy()
-		tl4:Destroy()
-		tl5:Destroy()
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "AEG'S PRISON LIFE GUI";
-			Text = "Building Tools loaded.";
-			Duration = "10";
-		})
-	end)
-	
-	resbt.MouseButton1Click:Connect(function()
-		rmldc:InvokeServer(mf)
-	end)
-	
-	ivbbt.MouseButton1Click:Connect(function()
-		local Local = game:GetService('Players').LocalPlayer
-		local Char  = Local.Character
-		local touched = false
-		local tpdback = false
-		Local.CharacterAdded:connect(function(char)
-			if script.Disabled ~= true then
-				wait(.25)
-				local loc = Char.HumanoidRootPart.Position
-				Char:MoveTo(box.Position + Vector3.new(0,.5,0))
-			end
-		end)
-		--[[ *DISABLED*
-		game:GetService('UserInputService').InputBegan:connect(function(key)
-			if key.KeyCode == Enum.KeyCode.Equals then
-				if script.Disabled ~= true then
-					script.Disabled = true
-					print'you may re-execute'
-				end
-			end
-		end)
-		]]-- *DISABLED*
-		box = Instance.new('Part',workspace)
-		box.Anchored = true
-		box.CanCollide = true
-		box.Size = Vector3.new(10,1,10)
-		box.Position = Vector3.new(0,10000,0)
-		box.Touched:connect(function(part)
-			if (part.Parent.Name == Local.Name) then
-				if touched == false then
-					touched = true
-					local function apply()
-						if script.Disabled ~= true then
-							no = Char.HumanoidRootPart:Clone()
-							wait(.25)
-							Char.HumanoidRootPart:Destroy()
-							no.Parent = Char
-							Char:MoveTo(loc)
-							touched = false
-						end end
-					if Char then
-						apply()
-					end
-				end
-			end
-		end)
-		repeat wait() until Char
-		loc = Char.HumanoidRootPart.Position
-		Char:MoveTo(box.Position + Vector3.new(0,.5,0))
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "AEG'S PRISON LIFE GUI";
-			Text = "Invisible loaded. You can still see your character, but others can't.";
-			Duration = "10";
-		})
+	script.Parent.LocationsButton.MouseButton1Click:Connect(function()
+		script.Parent.MainScreen.Visible = false
+		script.Parent.LocationsScreen.Visible = true
+		script.Parent.TeamsScreen.Visible = false
+		script.Parent.ItemsScreen.Visible = false
 	end)
 end
-coroutine.wrap(NTXS_fake_script)()
-local function FQZQK_fake_script()
-	local script = Instance.new('LocalScript', TeamsHeader)
+coroutine.wrap(FrameIndexScript)()
+local function TeamScreenScript()
+	local script = Instance.new('LocalScript', TeamsScreen)
 
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
+	script.Parent.Guards.MouseButton1Click:Connect(function()
+		game:GetService("Workspace").Remote.TeamEvent:FireServer("Bright blue")
+		game:GetService("Workspace").Remote.loadchar:InvokeServer(game:GetService("Players").LocalPlayer)
 	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
+	script.Parent.Prisoners.MouseButton1Click:Connect(function()
+		game:GetService("Workspace").Remote.TeamEvent:FireServer("Bright orange")
+		game:GetService("Workspace").Remote.loadchar:InvokeServer(game:GetService("Players").LocalPlayer)
 	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
+	script.Parent.Criminals.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-975.896118, 109.323769, 2053.70483, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		wait(0.25)
+		game:GetService("Workspace").Remote.loadchar:InvokeServer(game:GetService("Players").LocalPlayer)
 	end)
 end
-coroutine.wrap(FQZQK_fake_script)()
-local function VXZQATA_fake_script()
-	local script = Instance.new('LocalScript', MainHeader)
+coroutine.wrap(TeamScreenScript)()
+local function ItemsScreenScript()
+	local script = Instance.new('LocalScript', ItemsScreen)
 
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
+	script.Parent.Guns.MouseButton1Click:Connect(function()
+		for i, v in pairs(game:GetService("Workspace").Prison_ITEMS.giver:GetChildren()) do
+			workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
 		end
 	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
+	script.Parent.Tools.MouseButton1Click:Connect(function()
+		for i, v in pairs(game:GetService("Workspace").Prison_ITEMS.single:GetChildren()) do
+			workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
 		end
 	end)
+	script.Parent.Mirror.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage")["Tools"]["Extendo mirror"]:Clone().Parent = game:GetService("Players").LocalPlayer.Backpack
+	end)
+	script.Parent.Stick.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage")["Tools"]["Sharpened stick"]:Clone().Parent = game:GetService("Players").LocalPlayer.Backpack
+	end)
 	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
+	
+end
+coroutine.wrap(ItemsScreenScript)()
+local function LocationsScreenScript()
+	local script = Instance.new('LocalScript', LocationsScreen)
+
+	script.Parent.Armory.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(837.647949, 99.9899826, 2267.80103, 0.99985522, -5.71318672e-08, 0.0170171391, 5.6792274e-08, 1, 2.04392734e-08, -0.0170171391, -1.9469871e-08, 0.99985522)
+	end)
+	script.Parent.Gate.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(516.019958, 98.039917, 2215.72754, 0.00768364873, 3.00835623e-08, 0.999970496, -2.28609203e-08, 1, -2.99087901e-08, -0.999970496, -2.26304362e-08, 0.00768364873)
+	end)
+	script.Parent.Sewers.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(916.325623, 78.7009583, 2435.36816, 0.99995786, -5.1399212e-08, 0.00918075535, 5.08010771e-08, 1, 6.5384036e-08, -0.00918075535, -6.49148859e-08, 0.99995786)
+	end)
+	script.Parent.Tower.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(822.722717, 130.039902, 2588.15283, 0.99975431, 1.97075885e-08, 0.022166241, -1.9273461e-08, 1, -1.97987493e-08, -0.022166241, 1.93666647e-08, 0.99975431)
+	end)
+	script.Parent.Bridge.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-43.9293137, 11.0993309, 1301.15112, -0.969649971, 3.32890764e-08, -0.244497299, 4.10187546e-08, 1, -2.6522823e-08, 0.244497299, -3.57468295e-08, -0.969649971)
+	end)
+	script.Parent.Garage.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-895.899658, 94.1287613, 2059.1272, 0.00350422086, -4.81785456e-08, 0.999993861, 5.31940039e-08, 1, 4.79924367e-08, -0.999993861, 5.30255022e-08, 0.00350422086)
+	end)
+	script.Parent.Secret.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(690.641541, 100.190758, 2343.59644, 0.0347761363, 8.20277748e-08, 0.999395132, 4.74425867e-08, 1, -8.37282883e-08, -0.999395132, 5.03256352e-08, 0.0347761363)
+	end)
+	script.Parent.Rooftop.MouseButton1Click:Connect(function()
+		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(810.438049, 118.989983, 2329.04419, -0.999183893, 1.60896203e-08, 0.04039298, 1.41728522e-08, 1, -4.77393591e-08, -0.04039298, -4.71279122e-08, -0.999183893)
+	end)
+	script.Parent.RDoors.MouseButton1Click:Connect(function ()
+		for i, v in pairs(game:GetService("Workspace").Doors:GetChildren()) do v:Destroy() end
+	end)
+	script.Parent.RTrees.MouseButton1Click:Connect(function()
+		for i, v in pairs(game:GetService("Workspace").Trees:GetChildren()) do v:Destroy() end
+		for i, v in pairs(game:GetService("Workspace")["Square Trees"]:GetChildren()) do v:Destroy() end
+		for i, v in pairs(game:GetService("Workspace")["Prison_Trees"]:GetChildren()) do v:Destroy() end
+	end)
+	script.Parent.RFences.MouseButton1Click:Connect(function()
+		for i, v in pairs(game:GetService("Workspace")["Prison_Fences"]:GetChildren()) do v:Destroy() end
 	end)
 end
-coroutine.wrap(VXZQATA_fake_script)()
-local function XTCS_fake_script()
-	local script = Instance.new('LocalScript', ItemsHeader)
-
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
-	end)
-end
-coroutine.wrap(XTCS_fake_script)()
-local function ZYGXTFW_fake_script()
-	local script = Instance.new('LocalScript', LocalHeader)
-
-	local UserInputService = game:GetService("UserInputService")
-	
-	local gui = script.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	local function update(input)
-		local delta = input.Position - dragStart
-		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	end
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	UserInputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
-	end)
-end
-coroutine.wrap(ZYGXTFW_fake_script)()
+coroutine.wrap(LocationsScreenScript)()
