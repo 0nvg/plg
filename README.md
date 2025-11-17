@@ -1,3 +1,9 @@
+# DEPRECATED
+
+Game's been updated, Roblox broke exploiting
+
+
+
 # Remake
 *Does not include admin commands, I wanted something minimal.*
 ## Code
